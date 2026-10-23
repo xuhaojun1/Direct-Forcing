@@ -10,7 +10,7 @@ from typing import Iterable, Mapping
 import numpy as np
 import torch
 
-from references.bank import file_sha256
+from utils.hashing import file_sha256
 
 
 RDM_JOINT_TEXT_MODEL = "ViT-SO400M-16-SigLIP2-256"

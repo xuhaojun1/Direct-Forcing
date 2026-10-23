@@ -2,7 +2,7 @@
 import time
 import torch
 import torch.utils.checkpoint
-from references.bank import RDMReference
+from trainer.references.bank import RDMReference
 
 
 def self_normalize_rdm_loss(raw: torch.Tensor, eps: float = 1.0e-7) -> torch.Tensor:

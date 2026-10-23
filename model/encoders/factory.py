@@ -10,13 +10,13 @@ def build_video_encoder(config, device, *, activation_checkpointing=None):
         raise ValueError(f"Unsupported release encoder: {model_id}")
     checkpointing = bool(config.rdm_encoder_activation_checkpointing) if activation_checkpointing is None else activation_checkpointing
     if model_id in DIT_ENCODER_IDS:
-        from encoders.dit import WanDiTFeatureEncoder
+        from model.encoders.dit import WanDiTFeatureEncoder
         encoder = WanDiTFeatureEncoder(config, device)
     else:
-        from encoders.videomae_v2 import VideoMAEv2LargeVideoEncoder
+        from model.encoders.videomae_v2 import VideoMAEv2LargeVideoEncoder
         encoder = VideoMAEv2LargeVideoEncoder(model_id, config.rdm_encoder_checkpoint_path,
             checkpoint_key=str(config.rdm_encoder_checkpoint_key), input_height=480, input_width=832,
             input_frames=81, padded_frames=81, temporal_pad="skip_first", feature_dim=1024,
             activation_checkpointing=checkpointing, device=device)
-    from encoders.tokens import TokenVideoEncoder
+    from model.encoders.tokens import TokenVideoEncoder
     return TokenVideoEncoder(encoder, int(config.rdm_token_count), config)

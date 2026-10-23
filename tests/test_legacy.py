@@ -12,7 +12,8 @@ from trainer.controller import GNMController, GNMREWController, FixedCCAControll
 from utils.config import load_spec, compile_runtime
 from utils.legacy import canonical_metadata
 from utils.portable import portable_contract
-from references.bank import load_reference, file_sha256
+from trainer.references.bank import load_reference
+from utils.hashing import file_sha256
 from utils.training_schedule import configured_learning_rate
 from utils.wan_resume import validate_resume_contract
 

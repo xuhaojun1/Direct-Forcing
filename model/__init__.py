@@ -1,4 +1,4 @@
-"""Shared causal video models; heavyweight backbones load on demand."""
+"""Causal video models, frozen feature encoders, and decoders; backbones load on demand."""
 
 __all__ = ["CausalVideoModel"]
 

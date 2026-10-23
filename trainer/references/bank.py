@@ -2,21 +2,13 @@
 
 from __future__ import annotations
 
-import hashlib
 from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Any, Mapping
 
 import torch
+from utils.hashing import file_sha256
 from utils.legacy import canonical_metadata
-
-
-def file_sha256(path: str | Path, chunk_size: int = 8 << 20) -> str:
-    digest = hashlib.sha256()
-    with open(path, "rb") as handle:
-        while chunk := handle.read(chunk_size):
-            digest.update(chunk)
-    return digest.hexdigest()
 
 
 @dataclass(frozen=True)

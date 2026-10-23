@@ -21,7 +21,7 @@ import wandb
 from trainer.controller import (
     GNMREWController, FixedCCAController, GNMController, ScheduledCCAController,
     GNM_REW_KIND, FIXED_CCA_KIND, GNM_KIND)
-from losses.cca import CCAFeatureLoss, token_cosine
+from trainer.losses.cca import CCAFeatureLoss, token_cosine
 from utils.training_schedule import training_batch
 from utils.wan_boundary_metrics import boundary_statistics
 from utils.transport import exact_ot
@@ -98,7 +98,7 @@ class DirectForcingTrainer(TrainingRuntime):
     def _cca_encoder_objective(self, encoder, latent):
         encoder.eval().requires_grad_(False)
         if latent:
-            from losses.cca_dit import DiTCCALoss
+            from trainer.losses.cca_dit import DiTCCALoss
             return DiTCCALoss(encoder)
         return CCAFeatureLoss(encoder, self.taew_decoder)
 
@@ -114,8 +114,8 @@ class DirectForcingTrainer(TrainingRuntime):
             if (resident.rdm_encoder_id == source.rdm_encoder_id
                     and resident.rdm_encoder_checkpoint_sha256 == source.rdm_encoder_checkpoint_sha256):
                 return self._cca_encoder_objective(branch['rdm_encoder'], latent)
-        from encoders.factory import build_video_encoder
-        from references.bank import file_sha256
+        from model.encoders.factory import build_video_encoder
+        from utils.hashing import file_sha256
         if not latent and file_sha256(source.rdm_encoder_checkpoint_path) != source.rdm_encoder_checkpoint_sha256:
             raise ValueError('Independent CCA encoder checkpoint checksum mismatch')
         encoder = build_video_encoder(source, self.device)
@@ -138,8 +138,8 @@ class DirectForcingTrainer(TrainingRuntime):
             return []
         if getattr(self, '_cca_cache_objective', None) is self.cca_objective:
             return self._cca_cache_instances
-        from references.cca_cache import CCATargetTokenCache
-        from losses.cca_dit import DiTCCALoss
+        from trainer.references.cca_cache import CCATargetTokenCache
+        from trainer.losses.cca_dit import DiTCCALoss
         config = OmegaConf.to_container(self.config, resolve=True)
         caches = []
         for module in self.cca_objective.modules():

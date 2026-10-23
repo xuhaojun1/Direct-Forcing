@@ -2,7 +2,7 @@
 
 import torch
 
-from losses.cca import token_cosine
+from trainer.losses.cca import token_cosine
 
 
 class DiTCCALoss(torch.nn.Module):

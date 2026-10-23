@@ -15,7 +15,7 @@ dynamic = ["dependencies"]
 dependencies = {file = ["requirements.txt"]}
 
 [tool.setuptools.packages.find]
-include = ["model*", "losses*", "encoders*", "references*", "pipeline*", "trainer*", "utils*", "eval*", "third_party*"]
+include = ["model*", "pipeline*", "trainer*", "utils*", "eval*", "third_party*"]
 
 [tool.setuptools.package-data]
 third_party = ["**/LICENSE"]

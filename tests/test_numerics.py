@@ -1,10 +1,10 @@
 import unittest
 import numpy as np
 import torch
-from references.bank import RDMReference
-from losses.rdm import mmd_nystrom_with_terms
-from references.tokens import build_token_reference, pool_cost_matrix
-from losses.cca import CCAFeatureLoss, token_cosine
+from trainer.references.bank import RDMReference
+from trainer.losses.rdm import mmd_nystrom_with_terms
+from trainer.references.tokens import build_token_reference, pool_cost_matrix
+from trainer.losses.cca import CCAFeatureLoss, token_cosine
 
 
 class Encoder(torch.nn.Module):

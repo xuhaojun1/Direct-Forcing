@@ -43,7 +43,7 @@ class VideoMAEv2LargeVideoEncoder(nn.Module):
         for name, digest in PINNED_FILES.items():
             if hashlib.sha256((directory/name).read_bytes()).hexdigest() != digest:
                 raise ValueError(f'Pinned VideoMAE v2 {name} changed')
-        from references.bank import file_sha256
+        from utils.hashing import file_sha256
         if file_sha256(checkpoint_path) != CHECKPOINT_SHA256:
             raise ValueError('VideoMAE v2 checkpoint checksum mismatch')
         from transformers import AutoModel

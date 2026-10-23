@@ -76,8 +76,8 @@ def main():
     import torch
     import open_clip
     from utils.clean_lmdb import WanCleanLatentDataset
-    from encoders.text import prompt_rows_sha256
-    from references.bank import file_sha256
+    from model.encoders.text import prompt_rows_sha256
+    from utils.hashing import file_sha256
 
     paths = spec.paths
     if Path(paths.metadata).exists():

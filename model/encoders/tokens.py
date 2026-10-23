@@ -97,7 +97,7 @@ class TokenVideoEncoder(nn.Module):
         return token_feature_contract(base,self.count)
 
     def reference_contract(self):
-        from encoders.text import feature_reference_contract
+        from model.encoders.text import feature_reference_contract
         cfg = self.config
         contract = feature_reference_contract(cfg, self)
         contract['rdm_reference_revision'] = str(cfg.rdm_reference_revision)

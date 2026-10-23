@@ -138,7 +138,7 @@ def base_runtime(spec, metadata):
 
 
 def encoder_runtime(spec, name, metadata=None, load_reference=True):
-    from encoders.config import configure_token_assets
+    from model.encoders.config import configure_token_assets
     metadata = read_metadata(spec) if metadata is None else metadata
     c = base_runtime(spec, metadata)
     configure_token_assets(c, name, ROOT)
@@ -168,7 +168,7 @@ def encoder_runtime(spec, name, metadata=None, load_reference=True):
 
 
 def compile_runtime(spec, load_references=True):
-    from encoders.config import configure_cca_feature_backend
+    from model.encoders.config import configure_cca_feature_backend
     metadata = read_metadata(spec)
     names = list(spec.features.rdm)
     if len(names) == 2:

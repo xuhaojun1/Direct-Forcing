@@ -29,11 +29,12 @@ def main():
     from utils.atomic import atomic_save
     from utils.dataset import PromptLMDBDataset
     from model.wan_adapter import WanVAEWrapper, WanTextEncoder
-    from encoders.factory import build_video_encoder
-    from references.bank import file_sha256, load_reference
-    from encoders.text import load_frozen_text_table, prompt_rows_sha256, feature_reference_contract
-    from references.builder import median_bandwidth
-    from references.tokens import pool_cost_matrix, build_token_reference
+    from model.encoders.factory import build_video_encoder
+    from trainer.references.bank import load_reference
+    from utils.hashing import file_sha256
+    from model.encoders.text import load_frozen_text_table, prompt_rows_sha256, feature_reference_contract
+    from trainer.references.builder import median_bandwidth
+    from trainer.references.tokens import pool_cost_matrix, build_token_reference
     from utils.clean_data import clean_data_identity
 
     rank, world = int(os.environ.get('RANK', 0)), int(os.environ.get('WORLD_SIZE', 1))

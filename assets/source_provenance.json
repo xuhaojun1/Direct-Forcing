@@ -70,7 +70,7 @@
     "source_sha256": "5ed572fa5a4cc29613be38d03a657c0321b801e06782722d2d05b3f0f8c4bc2d"
   },
   {
-    "file": "encoders/factory.py",
+    "file": "model/encoders/factory.py",
     "source": "ViRDM/virdm_integration/video_encoder.py",
     "source_sha256": "d6abcdd9630f0f4ced9ea312459f914f2a5483032e90eb637f19abf1102d0170"
   },
@@ -85,12 +85,12 @@
     "source_sha256": "f9c5b86ada5b8670017d37c1347c583a1585a147dfa84c8abdf50e553785c8ae"
   },
   {
-    "file": "references/tokens.py",
+    "file": "trainer/references/tokens.py",
     "source": "ViRDM/virdm_integration/token_reference.py",
     "source_sha256": "5b6b80d9ca9a9f7276f601c05df02dda0848cb94f84cae33704a2ad214441e24"
   },
   {
-    "file": "encoders/videomae_v2.py",
+    "file": "model/encoders/videomae_v2.py",
     "source": "ViRDM/virdm_integration/videomae_v2_video.py",
     "source_sha256": "3eaa1bb5e4cb2c8c5b4c36df6f7b998e61150c6e54c6bc4421fce7ea1c9c0f11"
   },
@@ -100,27 +100,27 @@
     "source_sha256": "0e8dbcf7a8698404a4f38345b2688c3ed4350814ac514b13deb09f82e90ed6c0"
   },
   {
-    "file": "references/builder.py",
+    "file": "trainer/references/builder.py",
     "source": "ViRDM/virdm_integration/reference_builder.py",
     "source_sha256": "2888772403f906ed64ef7b389f419386ec457536bf2143061c8a7cd6f9edd6e8"
   },
   {
-    "file": "encoders/tokens.py",
+    "file": "model/encoders/tokens.py",
     "source": "ViRDM/virdm_integration/token_video.py",
     "source_sha256": "88dd3813744e293be2ae6c5b5e945522fa25fa0bafe5e2db2d05285da1e647c5"
   },
   {
-    "file": "encoders/dit.py",
+    "file": "model/encoders/dit.py",
     "source": "ViRDM/virdm_integration/wan_dit.py",
     "source_sha256": "0acecc6dd1037da7e314ff7513ff23f82bf574e2940a9477b58bc7ce91736de5"
   },
   {
-    "file": "references/bank.py",
+    "file": "trainer/references/bank.py",
     "source": "ViRDM/virdm_integration/reference.py",
     "source_sha256": "78976217d2b67b1128e5eadc0d3223af672befbe57cb702c09d07f25b1d53498"
   },
   {
-    "file": "encoders/text.py",
+    "file": "model/encoders/text.py",
     "source": "ViRDM/virdm_integration/joint_text.py",
     "source_sha256": "45a4169fa826c45e97ef52d0f6e32e37efa1291db369f510b8ae603b0ff57189"
   },
@@ -185,7 +185,7 @@
     "source_sha256": "28b452ad74f924d2d0922d6b3e805dfa7f504c523ced240435fefad5f6f650a7"
   },
   {
-    "file": "references/cca_cache.py",
+    "file": "trainer/references/cca_cache.py",
     "source": "PFM_AR/xvideo/utils/wan_tf_target_cache.py",
     "source_sha256": "1eb8ce14fa5f31f0c2a53678fbb89e85251d875f19000242ec3e74ecff02dd3e"
   },
@@ -195,7 +195,7 @@
     "source_sha256": "3fc7312d4cf1beb2d3ae59fbeeb0fd74d23a73922abdc802a8843a07796397e0"
   },
   {
-    "file": "losses/cca.py",
+    "file": "trainer/losses/cca.py",
     "source": "PFM_AR/xvideo/utils/wan_tf_vjepa.py",
     "source_sha256": "b4727e86cd94022fea2f3c9dd77a6a15df93ff997d1d6f2b37dfcf2be4d6f4b1"
   },
@@ -205,7 +205,7 @@
     "source_sha256": "a868f802ca80078a3cffba824b04e8732e23213ba809c590579052ad71bb702e"
   },
   {
-    "file": "losses/cca_dit.py",
+    "file": "trainer/losses/cca_dit.py",
     "source": "PFM_AR/xvideo/utils/wan_tf_dit.py",
     "source_sha256": "0065ef4948493e10955996c18d2d6c92100b2970a5acec9268709bf025e830a5"
   },
@@ -230,7 +230,7 @@
     "source_sha256": "c4bb362a5a2a6e4c36008f5278b905245ac3e46cd8ed44ba46c5b98703324147"
   },
   {
-    "file": "losses/ensemble.py",
+    "file": "trainer/losses/ensemble.py",
     "source": "PFM_AR/xvideo/utils/wan_dual_features.py",
     "source_sha256": "1f1d5df5da26b1e665be3aa513fd1265fa9fcde3cb4b3f6f1184a543072a64ad"
   },
@@ -310,13 +310,18 @@
     "source_sha256": "b863f7a00f3047f4dfa4fff904b7a9beef8b120aa3381b5e86e1779871bd5e50"
   },
   {
-    "file": "losses/rdm.py",
+    "file": "trainer/losses/rdm.py",
     "source": "ViRDM/virdm_integration/reference.py",
     "source_sha256": "78976217d2b67b1128e5eadc0d3223af672befbe57cb702c09d07f25b1d53498"
   },
   {
-    "file": "encoders/dit.py",
+    "file": "model/encoders/dit.py",
     "source": "PFM_AR/xvideo/utils/wan_self_forcing.py",
     "source_sha256": "0211c21c45b00e2a232f89a31992abf7c43a448ab9596573818d6e316af00cb2"
+  },
+  {
+    "file": "utils/hashing.py",
+    "source": "ViRDM/virdm_integration/reference.py",
+    "source_sha256": "78976217d2b67b1128e5eadc0d3223af672befbe57cb702c09d07f25b1d53498"
   }
 ]

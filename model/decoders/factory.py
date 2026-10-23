@@ -1,6 +1,6 @@
 """Frozen TAEW training decoder and its cache/checkpoint identity."""
 from pathlib import Path
-from references.bank import file_sha256
+from utils.hashing import file_sha256
 from model.decoders.taew import TAEW21FullDecoder
 
 

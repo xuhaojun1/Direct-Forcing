@@ -18,8 +18,8 @@ import wandb
 from trainer.joint import DirectForcingTrainer
 from trainer.rdm import RDMTrainer
 from utils.transport import exact_ot, squared_cost
-from losses.ensemble import combine_rdm_branches
-from encoders.config import feature_runtime_config
+from trainer.losses.ensemble import combine_rdm_branches
+from model.encoders.config import feature_runtime_config
 
 
 class MultiEncoderTrainer(DirectForcingTrainer):

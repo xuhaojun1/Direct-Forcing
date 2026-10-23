@@ -8,10 +8,10 @@ import time
 import torch
 import torch.distributed as dist
 import wandb
-from encoders.text import couple_video_text, load_frozen_text_table, prompt_rows_sha256
-from references.bank import load_reference
-from losses.rdm import mmd_nystrom_with_terms, self_normalize_rdm_loss
-from references.bank import file_sha256
+from model.encoders.text import couple_video_text, load_frozen_text_table, prompt_rows_sha256
+from trainer.references.bank import load_reference
+from trainer.losses.rdm import mmd_nystrom_with_terms, self_normalize_rdm_loss
+from utils.hashing import file_sha256
 from trainer.base import BaseTrainer
 from utils.distributed import (
     differentiable_all_gather,
@@ -97,7 +97,7 @@ class RDMTrainer(BaseTrainer):
             )
 
     def _load_feature_backend(self, config):
-        from encoders.factory import build_video_encoder
+        from model.encoders.factory import build_video_encoder
 
         encoder = build_video_encoder(config, self.device)
         latent_encoder = str(config.rdm_input_mode) == 'normalized_wan_latent'
@@ -108,7 +108,7 @@ class RDMTrainer(BaseTrainer):
         """Allow temporal reference banks to share one frozen video encoder."""
         checkpoint_sha = (encoder.checkpoint_sha256 if latent_encoder
                           else file_sha256(config.rdm_encoder_checkpoint_path))
-        from encoders.text import feature_reference_contract
+        from model.encoders.text import feature_reference_contract
         contract = (encoder.reference_contract() if latent_encoder and config.get('rdm_joint_text_enabled', True)
                     else feature_reference_contract(config, encoder))
         reference = load_reference(
@@ -205,8 +205,8 @@ class RDMTrainer(BaseTrainer):
     @staticmethod
     def _validate_static_config(config):
         from utils.validation import validate_short_video_runtime
-        from encoders.factory import ENCODER_IDS, DIT_ENCODER_IDS
-        from encoders.tokens import TOKEN_POOL
+        from model.encoders.factory import ENCODER_IDS, DIT_ENCODER_IDS
+        from model.encoders.tokens import TOKEN_POOL
         validate_short_video_runtime(config)
         if config.rdm_encoder_id not in ENCODER_IDS:
             raise ValueError(f'Unsupported RDM encoder: {config.rdm_encoder_id}')

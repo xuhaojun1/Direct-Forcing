@@ -2,8 +2,8 @@
 import numpy as np
 import torch
 from scipy.optimize import linear_sum_assignment
-from losses.rdm import mmd_nystrom_with_terms
-from encoders.text import couple_video_text
+from trainer.losses.rdm import mmd_nystrom_with_terms
+from model.encoders.text import couple_video_text
 
 
 @torch.no_grad()
