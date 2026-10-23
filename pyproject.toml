@@ -18,7 +18,7 @@ dependencies = {file = ["requirements.txt"]}
 include = ["model*", "pipeline*", "trainer*", "utils*", "eval*", "third_party*"]
 
 [tool.setuptools.package-data]
-third_party = ["**/LICENSE"]
+third_party = ["README.md", "**/LICENSE"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
