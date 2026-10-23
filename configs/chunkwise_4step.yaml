@@ -1,0 +1,44 @@
+# Main paper configuration. Paths resolve against the repository root.
+name: chunkwise_4step
+paths:
+  wan: checkpoints/Wan2.1-T2V-1.3B
+  dit: checkpoints/Wan2.1-T2V-14B-Diffusers
+  videomae: checkpoints/VideoMAEv2-Large
+  taew: checkpoints/taew2_1.pth
+  clean_lmdb: data/train/clean
+  prompt_lmdb: data/train/prompts
+  text_table: data/train/siglip2.npy
+  metadata: data/train/metadata.json
+  probes: data/train/probes.json
+  references: data/references
+  target_cache: data/target_cache
+  output: outputs/chunkwise_4step
+features:
+  cca: videomae_v2_l24
+  rdm: [videomae_v2, dit]
+training:
+  steps: 250
+  world_size: 8
+  rdm_batch: 128
+  cca_batch: 32
+  seed: 42
+  learning_rate: 2.5e-6
+  learning_rate_floor: 5.0e-7
+  cosine_end_step: 125
+  checkpoint_every: 25
+  preview_every: 10
+  reference_landmarks: 4096
+controller:
+  gnm: true
+  rew: true
+  r_min: 0.1
+  fixed_ratio: 1.0  # GNM-only ablation, when rew=false
+  fixed_weight: 1.0 # Used when both gnm and rew are false
+memory:
+  reference_residency: cpu
+  activation_offload: true
+  cache_cca_targets: true
+logging:
+  wandb_mode: disabled # Set online after running `wandb login`.
+  project: direct-forcing
+  entity: ""

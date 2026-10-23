@@ -1,0 +1,322 @@
+[
+  {
+    "file": "model/__init__.py",
+    "source": "ViRDM/model/__init__.py",
+    "source_sha256": "6d5c8d2807ea74fa01420b4b97a9cdbcb445c7ce91eba52c0640b2cb156da769"
+  },
+  {
+    "file": "model/causal_video.py",
+    "source": "ViRDM/model/virdm.py",
+    "source_sha256": "f2bac75b6ebd6c78e6e252b544cdf646308aba5dafbaef20ae224613cb41ec46"
+  },
+  {
+    "file": "model/base.py",
+    "source": "ViRDM/model/base.py",
+    "source_sha256": "5153f9762d6a5d20b55def141a8fd0601c10041ef2bffa4809edb134943f1706"
+  },
+  {
+    "file": "pipeline/__init__.py",
+    "source": "ViRDM/pipeline/__init__.py",
+    "source_sha256": "167c93ad848ea9f1b6d8872d7a516a1f07cb91b5d28961b31e8c8dca4424491f"
+  },
+  {
+    "file": "pipeline/self_rollout.py",
+    "source": "ViRDM/pipeline/virdm_training.py",
+    "source_sha256": "48a24bbe40c7510876dd8608ca0a155db4587ed57f014acbb183db0e72a964bd"
+  },
+  {
+    "file": "pipeline/causal_inference.py",
+    "source": "ViRDM/pipeline/causal_inference.py",
+    "source_sha256": "de186fc7d4255d8b63d096a6b80463bf37282e2a5a51b4c4945325d4d7cc46e9"
+  },
+  {
+    "file": "utils/misc.py",
+    "source": "ViRDM/utils/misc.py",
+    "source_sha256": "82a9ce473a86ad8f38b0726c3b95334d3cc99c476520a93837f5fb05aaabea87"
+  },
+  {
+    "file": "model/wan_adapter.py",
+    "source": "ViRDM/utils/wan_wrapper.py",
+    "source_sha256": "b79e3c373006ecfd711aa9ce3cdf1ca412a08b536f132ee2c66973886bf5e6b0"
+  },
+  {
+    "file": "utils/lmdb_.py",
+    "source": "ViRDM/utils/lmdb_.py",
+    "source_sha256": "d8bfb912cd75a947a8214955b1022662c99d4b23ff882d6e68bb717faafe8b1e"
+  },
+  {
+    "file": "utils/__init__.py",
+    "source": "ViRDM/utils/__init__.py",
+    "source_sha256": "d7410299cfa3ade6dc8a1bb72da1c602352c846e804e80cebd5dd31a9a9439aa"
+  },
+  {
+    "file": "utils/dataset.py",
+    "source": "ViRDM/utils/dataset.py",
+    "source_sha256": "a7bcce51e938aa1cdec6cc0c07915c2691ac864ee488cd1a3ac84350368cb972"
+  },
+  {
+    "file": "utils/distributed.py",
+    "source": "ViRDM/utils/distributed.py",
+    "source_sha256": "abd9c8b6df17f0b796e850b787f41070cdee465f01941e592f932b7b1a70e1a0"
+  },
+  {
+    "file": "utils/scheduler.py",
+    "source": "ViRDM/utils/scheduler.py",
+    "source_sha256": "4194ef1324bb06527621749c7f9a82f431ccf011823aa65099cb7bdf116b642e"
+  },
+  {
+    "file": "utils/prompt_embedding_cache.py",
+    "source": "ViRDM/utils/prompt_embedding_cache.py",
+    "source_sha256": "5ed572fa5a4cc29613be38d03a657c0321b801e06782722d2d05b3f0f8c4bc2d"
+  },
+  {
+    "file": "encoders/factory.py",
+    "source": "ViRDM/virdm_integration/video_encoder.py",
+    "source_sha256": "d6abcdd9630f0f4ced9ea312459f914f2a5483032e90eb637f19abf1102d0170"
+  },
+  {
+    "file": "model/decoders/factory.py",
+    "source": "ViRDM/virdm_integration/training_decoder.py",
+    "source_sha256": "bc7826df1b64c5c49327e718169f94140d34e192140259452a15c149fc7bb057"
+  },
+  {
+    "file": "utils/clean_data.py",
+    "source": "ViRDM/virdm_integration/clean_data.py",
+    "source_sha256": "f9c5b86ada5b8670017d37c1347c583a1585a147dfa84c8abdf50e553785c8ae"
+  },
+  {
+    "file": "references/tokens.py",
+    "source": "ViRDM/virdm_integration/token_reference.py",
+    "source_sha256": "5b6b80d9ca9a9f7276f601c05df02dda0848cb94f84cae33704a2ad214441e24"
+  },
+  {
+    "file": "encoders/videomae_v2.py",
+    "source": "ViRDM/virdm_integration/videomae_v2_video.py",
+    "source_sha256": "3eaa1bb5e4cb2c8c5b4c36df6f7b998e61150c6e54c6bc4421fce7ea1c9c0f11"
+  },
+  {
+    "file": "model/decoders/taew.py",
+    "source": "ViRDM/virdm_integration/taew21.py",
+    "source_sha256": "0e8dbcf7a8698404a4f38345b2688c3ed4350814ac514b13deb09f82e90ed6c0"
+  },
+  {
+    "file": "references/builder.py",
+    "source": "ViRDM/virdm_integration/reference_builder.py",
+    "source_sha256": "2888772403f906ed64ef7b389f419386ec457536bf2143061c8a7cd6f9edd6e8"
+  },
+  {
+    "file": "encoders/tokens.py",
+    "source": "ViRDM/virdm_integration/token_video.py",
+    "source_sha256": "88dd3813744e293be2ae6c5b5e945522fa25fa0bafe5e2db2d05285da1e647c5"
+  },
+  {
+    "file": "encoders/dit.py",
+    "source": "ViRDM/virdm_integration/wan_dit.py",
+    "source_sha256": "0acecc6dd1037da7e314ff7513ff23f82bf574e2940a9477b58bc7ce91736de5"
+  },
+  {
+    "file": "references/bank.py",
+    "source": "ViRDM/virdm_integration/reference.py",
+    "source_sha256": "78976217d2b67b1128e5eadc0d3223af672befbe57cb702c09d07f25b1d53498"
+  },
+  {
+    "file": "encoders/text.py",
+    "source": "ViRDM/virdm_integration/joint_text.py",
+    "source_sha256": "45a4169fa826c45e97ef52d0f6e32e37efa1291db369f510b8ae603b0ff57189"
+  },
+  {
+    "file": "model/wan/__init__.py",
+    "source": "ViRDM/wan/__init__.py",
+    "source_sha256": "4c0536f8ce5cc223e122c59e83d206c71ed56a1924f50dc08b86382493dc5303"
+  },
+  {
+    "file": "model/wan/modules/attention.py",
+    "source": "ViRDM/wan/modules/attention.py",
+    "source_sha256": "8d8633840f4df10cd463232a7f4990e554b135706d69a3f5552c08151a13c348"
+  },
+  {
+    "file": "model/wan/modules/t5.py",
+    "source": "ViRDM/wan/modules/t5.py",
+    "source_sha256": "7e8c2084075417070ca9f3624577c2af8f84e20cb23965cdbd78d0a1018acb61"
+  },
+  {
+    "file": "model/wan/modules/__init__.py",
+    "source": "ViRDM/wan/modules/__init__.py",
+    "source_sha256": "32c77010e48df4943da321d458e0aab964d462e17248685a3f80e4777d600c47"
+  },
+  {
+    "file": "model/wan/modules/model.py",
+    "source": "ViRDM/wan/modules/model.py",
+    "source_sha256": "c28e020e30b08d0b1b7e8fdf48a57a00466ce21acee0dbfc6558b18659bbe45a"
+  },
+  {
+    "file": "model/wan/modules/causal_model.py",
+    "source": "ViRDM/wan/modules/causal_model.py",
+    "source_sha256": "d176ec0b8e5e915285b5ddfef1945dee527107a524a93d9c36764b5c82602fb6"
+  },
+  {
+    "file": "model/wan/modules/vae.py",
+    "source": "ViRDM/wan/modules/vae.py",
+    "source_sha256": "a4c1d9362f25a1bef463ac51caed4097317c007d4d87887b02a3a733fdbc48d5"
+  },
+  {
+    "file": "model/wan/modules/tokenizers.py",
+    "source": "ViRDM/wan/modules/tokenizers.py",
+    "source_sha256": "cf5b189c1ae017326efadab2fc6380ba223fa7a59d0be6464bd264db53c76934"
+  },
+  {
+    "file": "third_party/__init__.py",
+    "source": "ViRDM/third_party/__init__.py",
+    "source_sha256": "00ca131994f36954d15168ea6167f97f46a9df2408d7a9fc1d0c99d1cec179a8"
+  },
+  {
+    "file": "third_party/taehv/LICENSE",
+    "source": "ViRDM/third_party/taehv/LICENSE",
+    "source_sha256": "532f9e394518ffddecd294a517d5b41d79d3d3866c3fb95a6cb0e8bcc02370bf"
+  },
+  {
+    "file": "third_party/taehv/__init__.py",
+    "source": "ViRDM/third_party/taehv/__init__.py",
+    "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "file": "third_party/taehv/taehv.py",
+    "source": "ViRDM/third_party/taehv/taehv.py",
+    "source_sha256": "28b452ad74f924d2d0922d6b3e805dfa7f504c523ced240435fefad5f6f650a7"
+  },
+  {
+    "file": "references/cca_cache.py",
+    "source": "PFM_AR/xvideo/utils/wan_tf_target_cache.py",
+    "source_sha256": "1eb8ce14fa5f31f0c2a53678fbb89e85251d875f19000242ec3e74ecff02dd3e"
+  },
+  {
+    "file": "utils/wan_boundary_metrics.py",
+    "source": "PFM_AR/xvideo/utils/wan_boundary_metrics.py",
+    "source_sha256": "3fc7312d4cf1beb2d3ae59fbeeb0fd74d23a73922abdc802a8843a07796397e0"
+  },
+  {
+    "file": "losses/cca.py",
+    "source": "PFM_AR/xvideo/utils/wan_tf_vjepa.py",
+    "source_sha256": "b4727e86cd94022fea2f3c9dd77a6a15df93ff997d1d6f2b37dfcf2be4d6f4b1"
+  },
+  {
+    "file": "utils/training_schedule.py",
+    "source": "PFM_AR/xvideo/utils/wan_pair_schedule.py",
+    "source_sha256": "a868f802ca80078a3cffba824b04e8732e23213ba809c590579052ad71bb702e"
+  },
+  {
+    "file": "losses/cca_dit.py",
+    "source": "PFM_AR/xvideo/utils/wan_tf_dit.py",
+    "source_sha256": "0065ef4948493e10955996c18d2d6c92100b2970a5acec9268709bf025e830a5"
+  },
+  {
+    "file": "utils/wan_initialization.py",
+    "source": "PFM_AR/xvideo/utils/wan_initialization.py",
+    "source_sha256": "58caccf6ed0d1c0233e1afcbc526442ed61341324e3681b6877504adc0e19971"
+  },
+  {
+    "file": "utils/wan_checkpoint.py",
+    "source": "PFM_AR/xvideo/utils/wan_checkpoint.py",
+    "source_sha256": "a3267102ae1700e8665d21c1e23d66db46104972ba164b377ad45c0722dbd006"
+  },
+  {
+    "file": "trainer/controller.py",
+    "source": "PFM_AR/xvideo/utils/wan_tf_mmd_schedule.py",
+    "source_sha256": "51b8f73c4dbbe3658513a3150ac346928489b6586d4e81dc7da2a952ebaafa87"
+  },
+  {
+    "file": "utils/wan_resume.py",
+    "source": "PFM_AR/xvideo/utils/wan_resume.py",
+    "source_sha256": "c4bb362a5a2a6e4c36008f5278b905245ac3e46cd8ed44ba46c5b98703324147"
+  },
+  {
+    "file": "losses/ensemble.py",
+    "source": "PFM_AR/xvideo/utils/wan_dual_features.py",
+    "source_sha256": "1f1d5df5da26b1e665be3aa513fd1265fa9fcde3cb4b3f6f1184a543072a64ad"
+  },
+  {
+    "file": "utils/logging_metrics.py",
+    "source": "PFM_AR/xvideo/utils/wan_research_logging.py",
+    "source_sha256": "7b6e263dcc499c4a3bf7a4c477516aaede25931b60416e369764e01b4504f57f"
+  },
+  {
+    "file": "utils/clean_lmdb.py",
+    "source": "PFM_AR/xvideo/dataset/wan_clean_lmdb.py",
+    "source_sha256": "5f7706e2973aa11e94df0227fa360f6f8b3daffa8532116a3cd4c5a6c083905b"
+  },
+  {
+    "file": "trainer/runtime.py",
+    "source": "PFM_AR/tools/train_wan_virdm_paired.py",
+    "source_sha256": "91a7d64bde2edc78919d033f39ee5767b08633e1bbced468f13ea29fd3f0b3e4"
+  },
+  {
+    "file": "trainer/joint.py",
+    "source": "PFM_AR/tools/train_wan_pair_mmd.py",
+    "source_sha256": "ee275eabf2963c7b7f1ed4322db9a951544079cabcc7bc2976d664a9af0b556d"
+  },
+  {
+    "file": "trainer/multi_encoder.py",
+    "source": "PFM_AR/tools/train_wan_dual_pair_mmd.py",
+    "source_sha256": "656e62331aaa4bf112c6c983da5f68e0a17ca8d8184b2ee60e65fa2b62db5bf6"
+  },
+  {
+    "file": "utils/transport.py",
+    "source": "PFM_AR/tools/wan_feature_transport_metrics.py",
+    "source_sha256": "c855eafd1bb410f18a5a81f1dc137fc14d3864a8e0f1b5ad2cbab60104704dac"
+  },
+  {
+    "file": "utils/token_metrics.py",
+    "source": "PFM_AR/tools/wan_token_metrics.py",
+    "source_sha256": "75fe57d61dc3c7247d348931da4d8d8a615852d218548118fbeded947cb2c718"
+  },
+  {
+    "file": "utils/atomic.py",
+    "source": "PFM_AR/tools/wan_atomic.py",
+    "source_sha256": "643f0b7a4cd004175df35c7b728444747adc8505d14501975652205b9b27d972"
+  },
+  {
+    "file": "utils/early_stop.py",
+    "source": "PFM_AR/tools/wan_checkpoint_early_stop.py",
+    "source_sha256": "77beb378934ca43419e92ed28a985303a5f2af7847038c7856bac84ec6cdd6d7"
+  },
+  {
+    "file": "utils/locks.py",
+    "source": "PFM_AR/tools/wan_shared_lock.py",
+    "source_sha256": "035712e346ad25e99ede28482fa51e58710cd2feeecb37f4cc9d620c38da8a02"
+  },
+  {
+    "file": "trainer/rdm.py",
+    "source": "ViRDM/trainer/virdm.py",
+    "source_sha256": "b863f7a00f3047f4dfa4fff904b7a9beef8b120aa3381b5e86e1779871bd5e50"
+  },
+  {
+    "file": "pipeline/export_videos.py",
+    "source": "ViRDM/scripts/export_videos.py",
+    "source_sha256": "83e5753756daf6671a9674d216a3c96d01d273cd10908585e2cfcff2d6bf79bf"
+  },
+  {
+    "file": "eval/score.py",
+    "source": "ViRDM/scripts/run_vbench.py",
+    "source_sha256": "abf556855044dea63de710d56990d4cb253a101e64a887ec79c34d2bb7602359"
+  },
+  {
+    "file": "eval/summarize.py",
+    "source": "ViRDM/scripts/summarize_vbench.py",
+    "source_sha256": "3d9aa46756d9cb325e93abb667c902a167019ba5576cf6b2cb382c34cc6791cd"
+  },
+  {
+    "file": "trainer/base.py",
+    "source": "ViRDM/trainer/virdm.py",
+    "source_sha256": "b863f7a00f3047f4dfa4fff904b7a9beef8b120aa3381b5e86e1779871bd5e50"
+  },
+  {
+    "file": "losses/rdm.py",
+    "source": "ViRDM/virdm_integration/reference.py",
+    "source_sha256": "78976217d2b67b1128e5eadc0d3223af672befbe57cb702c09d07f25b1d53498"
+  },
+  {
+    "file": "encoders/dit.py",
+    "source": "PFM_AR/xvideo/utils/wan_self_forcing.py",
+    "source_sha256": "0211c21c45b00e2a232f89a31992abf7c43a448ab9596573818d6e316af00cb2"
+  }
+]

@@ -1,0 +1,15 @@
+name: CPU checks
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install omegaconf==2.3.1 numpy lmdb ruff
+      - run: python -m compileall -q model pipeline trainer losses encoders references utils scripts eval train.py inference.py
+      - run: ruff check .
+      - run: python -m unittest discover -s tests -v

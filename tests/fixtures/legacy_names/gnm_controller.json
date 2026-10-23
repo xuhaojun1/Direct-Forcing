@@ -1,0 +1,27 @@
+{
+  "state": {
+    "kind": "gradient_only_current_v1",
+    "epsilon": 1e-12,
+    "last_step": 3,
+    "current_pair_norm": 0.7,
+    "current_mmd_norm": 1.2,
+    "target_ratio": 0.5
+  },
+  "expected_future_logs": [
+    {
+      "pair/coefficient": 1.0,
+      "pair/target_gradient_ratio": 0.5,
+      "pair/gradient_scale": 2.0
+    },
+    {
+      "pair/coefficient": 1.125,
+      "pair/target_gradient_ratio": 0.5,
+      "pair/gradient_scale": 2.25
+    },
+    {
+      "pair/coefficient": 0.06666666666666667,
+      "pair/target_gradient_ratio": 0.5,
+      "pair/gradient_scale": 0.13333333333333333
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "model": "Direct-Forcing",
+  "checkpoint_step": 150,
+  "checkpoint_sha256": "0671ae05ab5bf848743abb5f3bd2b8387e453439c93e5142ffd517c5d100b298",
+  "configuration": {
+    "cca": "VideoMAE v2 L24",
+    "rdm": [
+      "VideoMAE v2 L16",
+      "DiT L9"
+    ],
+    "text_encoder": "SigLIP2",
+    "denoising_steps": 4,
+    "latent_frames_per_chunk": 3
+  },
+  "frame_indices": [
+    0,
+    40,
+    80
+  ],
+  "source_fps": 16,
+  "image_processing": "Use only our generated frames; preserve the full frame; resize proportionally and arrange left to right.",
+  "cases": [
+    {
+      "id": "frisbee",
+      "title": "A frisbee flying across a park",
+      "original_prompt": "a frisbee",
+      "prompt": "A dynamic, mid-action shot of a colorful frisbee soaring through the air against a bright, sunny sky. The frisbee spins gracefully, showcasing its vibrant colors and aerodynamic shape. In the background, a lush green park with tall grass and trees can be seen, indicating an active outdoor environment. The camera remains static, capturing the frisbee's natural motion as it arcs through the scene. The lighting is soft and natural, highlighting the frisbee's smooth trajectory. Close-up shot focusing on the frisbee in motion.",
+      "seed": 1793,
+      "image": "frisbee.jpg",
+      "source_frame_sha256": {
+        "0": "bf34693d8e7f1c6be4461035ddfc29c6aa4a21e7464b3fc72e7b43bc8769463a",
+        "40": "f4183fea2525f0b60b64e84361d5cfd9439154b9e475ebf090fd2b24002feb0e",
+        "80": "e687b1217910f09724275c28e098cd941dd36fc3eb29fd82c8f4ee759bc7a1ac"
+      }
+    },
+    {
+      "id": "tornado",
+      "title": "A tornado above a glowing city",
+      "original_prompt": "An epic tornado attacking above a glowing city at night, the tornado is made of smoke",
+      "prompt": "In an epic scene, a massive tornado composed of swirling smoke descends from the night sky, attacking a futuristic city bathed in neon lights and glow. The tornado is dark and ominous, with tendrils of smoke reaching out to engulf towering skyscrapers and streets below. The city glows vibrantly, with colorful lights reflecting off the storm clouds and rain. Buildings are illuminated by emergency lights and flickering street lamps as the tornado twists and turns above, casting dramatic shadows. The scene captures the chaos and intensity of nature's wrath against human civilization, with a wide-angle view to showcase the scale and destruction.",
+      "seed": 3837,
+      "image": "tornado.jpg",
+      "source_frame_sha256": {
+        "0": "f647be80128762cbf117f4bd9da1be5b640faa3cd0b956d758d1db846f1bf481",
+        "40": "6a2c8913fd1c5ca366d4a3f7d65a095d20f743275475da19a0874276e4f702ad",
+        "80": "db300a870355878a73c185e89a1b8da3405718f8aa6ff7a48f5e08de981dd21c"
+      }
+    },
+    {
+      "id": "raccoon_guitar",
+      "title": "A raccoon playing guitar at sea",
+      "original_prompt": "A cute raccoon playing guitar in a boat on the ocean",
+      "prompt": "A cute raccoon playing a guitar in a small boat on the vast ocean. The raccoon has fluffy gray fur, large black bandit-mask-like patches around its eyes, and expressive brown eyes. It sits comfortably in the boat, holding the guitar with both front paws and strumming the strings with its fingers, creating a playful and whimsical atmosphere. The boat gently rocks on the waves, surrounded by sparkling water and a clear blue sky with fluffy clouds. The camera captures the raccoon from a mid-shot angle, focusing on its charming interaction with the guitar.",
+      "seed": 3778,
+      "image": "raccoon_guitar.jpg",
+      "source_frame_sha256": {
+        "0": "454851c82d087eeb49c7a64e64c790d9c386fe2356656689c12a642d1e43b6ad",
+        "40": "f8f8a24b43f3b04e9892c7f2f958493945687b96d07d451b48eb1d0f983acac0",
+        "80": "0790eee76f40ffef9bda062565c44de8c261ff26e762af38dfb68f7ef3a95d80"
+      }
+    },
+    {
+      "id": "coastal_beach",
+      "title": "A coastal beach in the style of Van Gogh",
+      "original_prompt": "A beautiful coastal beach in spring, waves lapping on sand by Vincent van Gogh",
+      "prompt": "A beautiful coastal beach scene in spring, inspired by Vincent van Gogh's style. The beach is filled with soft, golden sand, and the water gently laps at the shore with serene waves. The sky is painted with vibrant hues of pink, orange, and blue, reflecting the early morning light. Palm trees sway gently in the breeze, casting dappled shadows on the sand. Seagulls fly overhead, adding to the tranquil atmosphere. The background showcases a picturesque horizon with rolling hills and a dense forest. The scene is captured in Van Gogh's distinct post-impressionist style, with bold brushstrokes and rich colors. Wide shot, capturing the expansive beauty of the coastal landscape.",
+      "seed": 3735,
+      "image": "coastal_beach.jpg",
+      "source_frame_sha256": {
+        "0": "2abcd8b8a0d440e909e2604a9beb9572eaea19823b31dfc6b4d35fffa25306ac",
+        "40": "ca325b35207a3416cf5fda378a6abef83588422e27c379f001c80717316592ea",
+        "80": "0a2de72f06e348010e986da35112072763f3b44e8f7fe6db5ac6075be1fc55e4"
+      }
+    }
+  ]
+}

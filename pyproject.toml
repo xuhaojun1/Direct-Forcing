@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "direct-forcing"
+version = "0.1.0"
+description = "Joint causal alignment and representation distribution matching for autoregressive video generation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["model*", "losses*", "encoders*", "references*", "pipeline*", "trainer*", "utils*", "eval*", "third_party*"]
+
+[tool.setuptools.package-data]
+third_party = ["**/LICENSE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["F821", "F822", "F823"]

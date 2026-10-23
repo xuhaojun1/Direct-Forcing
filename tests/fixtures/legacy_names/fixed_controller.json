@@ -1,0 +1,18 @@
+{
+  "state": {
+    "kind": "fixed_loss_v1",
+    "coefficient": 0.3,
+    "last_step": 3
+  },
+  "expected_future_logs": [
+    {
+      "pair/coefficient": 0.3
+    },
+    {
+      "pair/coefficient": 0.3
+    },
+    {
+      "pair/coefficient": 0.3
+    }
+  ]
+}

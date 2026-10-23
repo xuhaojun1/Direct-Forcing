@@ -1,0 +1,10 @@
+_base_: chunkwise_4step.yaml
+name: chunkwise_4step_v16
+paths:
+  output: outputs/chunkwise_4step_v16
+features:
+  cca: videomae_v2
+  rdm: [videomae_v2]
+training:
+  steps: 150
+  rdm_batch: 64
