@@ -1,0 +1,16 @@
+rdm_encoder_id: videomae_v2_vitl_l23_5x16_224
+rdm_encoder_checkpoint_path: ''
+rdm_encoder_checkpoint_sha256: c27064402bfec2c7495e2226a5e0d8f46374b4df4b03026af1e10a57e11b2996
+rdm_encoder_checkpoint_key: safetensors
+rdm_encoder_activation_checkpointing: true
+rdm_input_mode: native_video
+rdm_input_height: 480
+rdm_input_width: 832
+rdm_pool: fixed_tokens_flatten_sqrt_k_v1
+rdm_representation: tokens
+rdm_token_count: 1280
+rdm_feature_dim: 1310720
+rdm_video_frames: 81
+rdm_video_padded_frames: 81
+rdm_video_temporal_pad: skip_first
+rdm_joint_feature_dim: 1311872
